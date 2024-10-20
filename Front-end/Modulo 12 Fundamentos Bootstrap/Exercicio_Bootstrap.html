@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Login</title>
+    <style>
+        * { 
+            box-sizing: border-box;
+        }
+
+        #email_login, #tel_login, #botao, #nome_login{
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+
+        label {
+            margin-bottom: 2px;
+        }
+
+        .row{
+            margin: 25px 20px;
+            display: flex;
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row-8">
+            <div class="col-10" id="div_col">
+                <h1>Registre-se</h1>
+                <form action="">
+                        <div class="row">
+                            <label for="nome">Nome</label>
+                            <input type="text" placeholder="Digite seu nome completo" name="nome" id="nome">
+                            <label for="email">E-mail</label>
+                            <input type="email" placeholder="Digite seu e-mail" name="email" id="email">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" placeholder="Digite seu número" name="telefone" id="telefone">
+                            <button type="submit" class="btn btn-success" id="botao"> Registrar </button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
