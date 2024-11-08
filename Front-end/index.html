@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Pessoal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #006400, #000000);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: rgba(0, 100, 0, 0.8);
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 2em;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Meu Site Pessoal</h1>
+        </header>
+        <section>
+            <h2>Meus Conhecimentos</h2>
+            <ul>
+                <li v-for="skill in skills">{{ skill }}</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Arquivos de Curso</h2>
+            <ul>
+                <li v-for="file in files"><a :href="file.link">{{ file.name }}</a></li>
+            </ul>
+        </section>
+        <footer>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <a href="https://www.github.com" target="_blank">GitHub</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                skills: ['Python', 'Desenvolvimento Web', 'Delphi', 'SQL Server'],
+                files: [
+                    { name: 'Curso 1', link: '#' },
+                    { name: 'Curso 2', link: '#' }
+                ]
+            }
+        });
+    </script>
+</body>
+</html>
